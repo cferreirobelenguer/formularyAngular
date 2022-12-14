@@ -1,0 +1,61 @@
+<!--Formulary with data-->
+<div class="container-fluid" id="container_form">
+    <div id="formulario_container">
+        <div class="formulario_title">
+            <h5>Introduzca sus datos:</h5>
+        </div>
+        <div class="formulario_form">
+            <form (ngSubmit)="sendData()">
+                <div class="inputs">
+                    <label for="url">URL o página web: </label><br>
+                    <input type="text" placeholder="Ej.pixelpro.es" required [(ngModel)]="data.url" name="url"/>
+                </div>
+                <div class="inputs">
+                    <label for="nombre">Indique la denominación o nombre de uso corriente o más común del sitio web: </label><br>
+                    <input type="text" placeholder="Ej.Pixelpro Formación" required [(ngModel)]="data.name" name="name"/>
+                </div>
+                <div class="inputs">
+                    Una persona física &nbsp;<input type="radio" value="persona física" [(ngModel)]="data.juridicPerson" name="juridicPerson"/>
+                    Una persona jurídica (ej. sociedad, asociación) &nbsp;<input type="radio" value="persona jurídica" [(ngModel)]="data.juridicPerson" name="juridicPerson"/>
+                </div>
+                <div class="inputs">
+                    <label for="nombre">Nombre completo del responsable del fichero de datos personales recogidos de usuarios: </label><br>
+                    <input type="text" placeholder="Ej.Miguel Torres Torres" required [(ngModel)]="data.nameResponsible" name="nameResponsible"/>
+                </div>
+                <div class="inputs">
+                    <label for="dni">DIF (DNI o NIE) del responsable del fichero de datos personales recogidos de usuarios: </label><br>
+                    <input type="text" placeholder="Ej.Miguel Torres Torres" required [(ngModel)]="data.dni" name="dni"/>
+                </div>
+                <div class="inputs">
+                    <label for="direccion">Dirección completa del/los responsable(s) del fichero de datos personales recogidos de usuarios: </label><br>
+                    <input type="text" placeholder="Ej.C/Cualquiera 20, 287894 - Colmenar Viejo, Madrid" required  [(ngModel)]="data.direction" name="direction"/>
+                </div>
+                <div class="inputs">
+                    <label for="telefono">Número(s) de teléfono del/los responsable(s) del fichero de datos personales recogidos de usuarios: </label><br>
+                    <input type="tel" placeholder="Ej.961111111" required [(ngModel)]="data.tlf" name="tlf"/>
+                </div>
+                <div class="inputs">
+                    <label for="fax">(Opcional) Número de fax del/los responsable(s) del fichero de datos personales recogidos de usuarios</label><br>
+                    <input type="tel" placeholder="Ej.961111111" [(ngModel)]="data.fax" name="fax"/>
+                </div>
+                <div class="inputs">
+                    <label for="denominacion social">Nombre completo o denominación social y domicilio completo de la(s) persona(s) o empresa(s) con las que serán compartidos<br>los datos personales recogidos de usuarios: </label><br>
+                    <textarea class="textarea" [(ngModel)]="data.social" name="social" placeholder="Ej. Pixelpro Data S.L con domicilio en Calle Oro 20, Colmenar Viejo, Madrid"></textarea>
+                </div>
+                <div class="inputs">
+                    <label for="certificado">Marque la casilla si el sitio web cuenta con un certificado SSL (Secure Socket Layer) que garantiza que los datos personales recogidos de usuarios se transmiten de forma segura y confidencial</label><br>
+                    <input type="checkbox" name="certificado" checked value="true" [(ngModel)]="data.verification"  name="verification"/>
+                </div>
+                
+            </form>
+    </div>
+    
+    
+    
+</div>
+<div class="formulary_button">
+    <button class="btn btn-primary p-3" (click)="sendData()">Copiar la política del sitio</button>
+</div>
+<hr>
+<!--Child component, it shows the information of private policity with the user's data-->
+    <app-texto-politica></app-texto-politica>
