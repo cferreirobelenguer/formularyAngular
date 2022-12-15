@@ -1,7 +1,7 @@
 <div class="container-fluid" id="container_form">
     <div class="texto_container">
         <div class="texto_title">
-            <h1>POLÍTICA DE PRIVACIDAD DEL SITIO WEB</h1>
+            <h1>POLÍTICA DE PRIVACIDAD DEL SITIO WEB {{datosUsuario.name}}</h1>
         </div>
         <div class="texto_subtitle">
             <h2>I. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
@@ -22,13 +22,11 @@
             
             <br>
             <strong>Identidad del responsable del tratamiento de los datos personales</strong>
-            <br>El responsable del tratamiento de los datos personales recogidos en  es: , con NIF:  (en adelante, Responsable del tratamiento). Sus datos de contacto son los siguientes:
+            <br>El responsable del tratamiento de los datos personales recogidos en  es {{datosUsuario.nameResponsible}}: , con NIF: {{datosUsuario.dni}} (en adelante, Responsable del tratamiento). Sus datos de contacto son los siguientes:
             <br>
-            Dirección:
+            Dirección: {{datosUsuario.direction}}
             <br>
-            Teléfono de contacto: 
-            <br>
-            Email de contacto:
+            Teléfono de contacto: {{datosUsuario.tlf}} 
             <br>
             <strong>Registro de Datos de Carácter Personal</strong>
             <br>En cumplimiento de lo establecido en el RGPD y la LOPD-GDD, le informamos que los datos personales recabados por , mediante los formularios extendidos en sus páginas quedarán incorporados y serán tratados en nuestro fichero con el fin de poder facilitar, agilizar y cumplir los compromisos establecidos entre  y el Usuario o el mantenimiento de la relación que se establezca en los formularios que este rellene, o para atender una solicitud o consulta del mismo. Asimismo, de conformidad con lo previsto en el RGPD y la LOPD-GDD, salvo que sea de aplicación la excepción prevista en el artículo 30.5 del RGPD, se mantine un registro de actividades de tratamiento que especifica, según sus finalidades, las actividades de tratamiento llevadas a cabo y las demás circunstancias establecidas en el RGPD.
@@ -98,11 +96,11 @@
                 <ol>	Todo documento que acredite la petición que formula.</ol>
             </li>
             <br>
-            Esta solicitud y todo otro documento adjunto podrá enviarse a la siguiente dirección y/o correo electrónico:
+            Esta solicitud y todo otro documento adjunto podrá enviarse a la siguiente dirección:
             <br>
-            Dirección postal:
+            Dirección postal: {{datosUsuario.direction}}
             <br>
-            Correo electrónico: 
+            DNI: {{datosUsuario.dni}}
             <br>
             <strong>Enlaces a sitios web de terceros</strong>
             <br>El Sitio Web puede incluir hipervínculos o enlaces que permiten acceder a páginas web de terceros distintos de , y que por tanto no son operados por . Los titulares de dichos sitios web dispondrán de sus propias políticas de protección de datos, siendo ellos mismos, en cada caso, responsables de sus propios ficheros y de sus propias prácticas de privacidad.
