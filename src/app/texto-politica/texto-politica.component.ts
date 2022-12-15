@@ -23,6 +23,7 @@ export class TextoPoliticaComponent implements OnInit{
 
   ngOnInit(): void {
     console.log(this.datosUsuario)
+    
   }
   
 }
