@@ -22,7 +22,7 @@ export class FormularyComponent {
   sendData(){
     //It put the data into the object
     this.data=this.data
-    console.log(this.data)
+    
   }
 
 }
